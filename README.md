@@ -3,7 +3,7 @@
 A new Flutter project.
 
 ## Getting Started
-run on start:- 2commends
+run on start:- 2commends 
 1 - `flutter pub get` 
 2 - `flutter packages pub run build_runner build`
 
