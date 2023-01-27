@@ -3,6 +3,9 @@
 A new Flutter project.
 
 ## Getting Started
+run on start:- 2commends
+1 - `flutter pub get` 
+2 - `flutter packages pub run build_runner build`
 
 This project is a starting point for a Flutter application.
 
