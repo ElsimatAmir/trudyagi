@@ -37,9 +37,8 @@ dependencies:
   cloud_firestore: ^4.3.1
   firebase_core: ^2.4.1
   get: ^4.6.5
-  curved_navigation_bar: ^1.0.3
+  salomon_bottom_bar: ^3.3.1
   lottie: ^2.2.0
-  
   auto_route: ^5.0.4
 
   # The following adds the Cupertino Icons font to your application.

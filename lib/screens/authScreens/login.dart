@@ -1,8 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import "package:flutter/material.dart";
 import 'package:trudyagi/components/authTextField.dart';
-
-import '../userScreens/userMainScreen.dart';
+import 'package:trudyagi/constants.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -10,7 +9,7 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Color.fromARGB(255, 90, 90, 90),
+      backgroundColor: mainDarkColor,
       body: _LoginHome(),
     );
   }
@@ -32,7 +31,7 @@ class _LoginHome extends StatelessWidget {
             flex: 2,
             child: Container(
               decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 184, 133, 30),
+                color: mainOrangeColor,
                 borderRadius:
                     BorderRadius.only(bottomLeft: Radius.circular(100.0)),
               ),
@@ -40,7 +39,7 @@ class _LoginHome extends StatelessWidget {
               child: const Text(
                 "ИМЯ.РФ",
                 style: TextStyle(
-                  color: Color.fromARGB(255, 53, 53, 53),
+                  color: mainTextColor,
                   fontSize: 25,
                 ),
               ),
@@ -50,7 +49,7 @@ class _LoginHome extends StatelessWidget {
             flex: 8,
             child: Container(
               decoration: const BoxDecoration(
-                  color: Color.fromARGB(255, 90, 90, 90),
+                  color: mainDarkColor,
                   borderRadius:
                       BorderRadius.only(topRight: Radius.circular(100.0))),
               child: Column(
@@ -63,13 +62,11 @@ class _LoginHome extends StatelessWidget {
                     child: Column(
                       children: const [
                         Padding(
-                          padding: EdgeInsets.only(
-                            top: 20.0,
-                          ),
+                          padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
                           child: Icon(
                             Icons.lock,
                             size: 40,
-                            color: Color.fromARGB(255, 36, 36, 36),
+                            color: mainTextColor,
                           ),
                         ),
                         Padding(
@@ -78,7 +75,7 @@ class _LoginHome extends StatelessWidget {
                             "hello again",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: Color.fromARGB(255, 184, 133, 30),
+                              color: mainOrangeColor,
                               fontSize: 16,
                             ),
                           ),
@@ -97,8 +94,8 @@ class _LoginHome extends StatelessWidget {
                           hintTextValue: "hello",
                           obscurveText: false,
                           iconName: Icon(Icons.person),
-                          borderColor: Color.fromARGB(255, 40, 40, 40),
-                          focusBorderColor: Color.fromARGB(255, 184, 133, 30),
+                          borderColor: mainDarkColor,
+                          focusBorderColor: mainOrangeColor,
                         ),
                         const SizedBox(
                           height: 20.0,
@@ -107,8 +104,8 @@ class _LoginHome extends StatelessWidget {
                           hintTextValue: "password",
                           obscurveText: true,
                           iconName: Icon(Icons.lock),
-                          borderColor: Color.fromARGB(255, 40, 40, 40),
-                          focusBorderColor: Color.fromARGB(255, 184, 133, 30),
+                          borderColor: mainDarkColor,
+                          focusBorderColor: mainOrangeColor,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
@@ -116,9 +113,9 @@ class _LoginHome extends StatelessWidget {
                             Padding(
                               padding: EdgeInsets.only(right: 30.0, top: 15.0),
                               child: Text(
-                                "забыли пароль ?",
+                                "Forget password?",
                                 style: TextStyle(
-                                  color: Color.fromARGB(255, 181, 181, 181),
+                                  color: mainTextColor,
                                   fontSize: 14,
                                 ),
                               ),
@@ -139,14 +136,14 @@ class _LoginHome extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(horizontal: 30),
                             child: GestureDetector(
                               onTap: () => {
-                                context.router.pushNamed("/UserMainScreen"),
+                                context.router.pushNamed("/userMainScreen"),
                               },
                               child: Container(
                                 alignment: Alignment.center,
                                 decoration: const BoxDecoration(
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(15.0)),
-                                  color: Color.fromARGB(255, 184, 133, 30),
+                                  color: mainOrangeColor,
                                 ),
                                 child: const Padding(
                                   padding: EdgeInsets.all(15.0),
@@ -155,7 +152,7 @@ class _LoginHome extends StatelessWidget {
                                     style: TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
-                                      color: Color.fromARGB(255, 53, 53, 53),
+                                      color: mainDarkColor,
                                     ),
                                   ),
                                 ),
@@ -174,7 +171,7 @@ class _LoginHome extends StatelessWidget {
                                 decoration: const BoxDecoration(
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(15.0)),
-                                  color: Color.fromARGB(255, 53, 53, 53),
+                                  color: mainDarkColor,
                                 ),
                                 child: const Padding(
                                   padding: EdgeInsets.all(15.0),
@@ -183,7 +180,7 @@ class _LoginHome extends StatelessWidget {
                                     style: TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
-                                      color: Color.fromARGB(255, 184, 133, 30),
+                                      color: mainOrangeColor,
                                     ),
                                   ),
                                 ),
@@ -202,13 +199,12 @@ class _LoginHome extends StatelessWidget {
                                   Text("iam Admin",
                                       style: TextStyle(
                                         fontSize: 14.0,
-                                        color:
-                                            Color.fromARGB(255, 181, 181, 181),
+                                        color: mainTextColor,
                                       )),
                                   Icon(
                                     Icons.account_circle_rounded,
                                     size: 20.0,
-                                    color: Color.fromARGB(255, 184, 133, 30),
+                                    color: mainOrangeColor,
                                   ),
                                 ],
                               ),
