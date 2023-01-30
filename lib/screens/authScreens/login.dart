@@ -107,20 +107,26 @@ class _LoginHome extends StatelessWidget {
                           borderColor: mainDarkColor,
                           focusBorderColor: mainOrangeColor,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: const [
-                            Padding(
-                              padding: EdgeInsets.only(right: 30.0, top: 15.0),
-                              child: Text(
-                                "Forget password?",
-                                style: TextStyle(
-                                  color: mainTextColor,
-                                  fontSize: 14,
+                        GestureDetector(
+                          onTap: () => {
+                            context.router.pushNamed("/loading"),
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: const [
+                              Padding(
+                                padding:
+                                    EdgeInsets.only(right: 30.0, top: 15.0),
+                                child: Text(
+                                  "Forget password?",
+                                  style: TextStyle(
+                                    color: mainTextColor,
+                                    fontSize: 14,
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ],
                     ),

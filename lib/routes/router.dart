@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:trudyagi/screens/authScreens/firstPage.dart';
 import 'package:trudyagi/screens/authScreens/signin.dart';
 
+import '../screens/loadingScreens/mainLoading.dart';
 import '../screens/userScreens/userMainScreen.dart';
 
 //adding part of the router.gr.dart
@@ -20,6 +21,10 @@ const List<AutoRoute<dynamic>> routes = [
   AutoRoute(
     path: "/userMainScreen",
     page: UserMainScreen,
+  ),
+  AutoRoute(
+    path: "/loading",
+    page: MainLoadingScreen,
   ),
 ];
 
