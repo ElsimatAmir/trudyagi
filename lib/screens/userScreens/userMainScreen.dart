@@ -103,7 +103,7 @@ class _UserMainScreenState extends State<UserMainScreen> {
 
             // body of the body
             Expanded(
-              flex: 10,
+              flex: 12,
               child: bodyUserPage,
             ),
           ],
